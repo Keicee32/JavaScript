@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function newSystem(num){
+
+            let newArr = [];
+            let echo;
+
+            for(let i = 1; i <= num; i++){
+                if(i % 2 === 0 && i % 3 === 0 && i % 5 === 0){
+                    echo = "yu-gi-oh";
+                }else if(i % 2 === 0 && i % 3 === 0){
+                    echo = "yu-gi";
+                }else if(i % 2 === 0 && i % 5 === 0){
+                    echo = "yu-oh";
+                }else if(i % 3 === 0 && i % 5 === 0){
+                    echo = "gi-oh";
+                } else if(i % 2 === 0){
+                    echo = "yu";
+                }else if(i % 3 === 0){
+                    echo = "gi";
+                }else if(i % 5 === 0){
+                    echo = "oh";
+                } else {
+                    echo = i;
+                }
+
+                newArr.push(echo);
+            }
+
+            console.log(newArr);
+            return newArr;
+
+        }
+
+        newSystem(100);
+
+    </script>
+
+</body>
+</html>
